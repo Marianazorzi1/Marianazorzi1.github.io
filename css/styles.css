@@ -9,11 +9,15 @@ text-decoration: underline;}
 ul {
     width: 20vw;
     margin: auto;
+   
  ;
 }
 
 li {text-align: center;
-      text-align: left;  
+      text-align: left; 
+  
+      text-align: center;
+      
     /* margin: 30px 20px ; serve para o alinhamento dos ingredientes */
 }
 
