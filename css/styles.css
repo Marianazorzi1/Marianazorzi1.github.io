@@ -1,5 +1,5 @@
 
-body {background-color:  rgb(146, 113, 107)}
+body {background-color:  rgb(240, 198, 221)}
 
 body {text-align: center;
 font-weight: bold;
@@ -19,14 +19,14 @@ li {text-align: center;
 
 img {width:400px;
 height: 300px;
-border: 10px solid rgb(138, 83, 83);
+border: 10px solid rgb(160, 105, 105);
 border-radius: 30px 50px;
 /* padding: 10px; */
 }
 
 /* title {margin: 200px;} */
 
-h1 { border:15px solid rgb(138, 83, 83);
+h1 { border:15px solid rgb(160, 105, 105);
 border-radius: 25px 40px; }
 
 
