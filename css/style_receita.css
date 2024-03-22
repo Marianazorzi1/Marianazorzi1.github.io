@@ -18,3 +18,8 @@ a {background-color:rgb(214, 122, 179);
     display: block;
     width: max-content;
 }
+a:hover{font-size: 20px;
+    background-color: rgb(191, 105, 231);
+
+}
+
