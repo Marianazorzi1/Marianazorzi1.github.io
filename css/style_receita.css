@@ -7,27 +7,27 @@ body {
 }
 
 img {
-    border: 5px solid rgb(255, 255, 255);
+    border: 5% solid rgb(255, 255, 255);
     border-radius: 25px 40px;
 }
 
 a {
     background-color: rgb(218, 123, 167);
-    font-size: 25px;
+    font-size: 150%;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
-    padding: 8px 15px;
+    padding: 6px 10px;
     border-radius: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display: block;
     width: max-content;
     text-align: center;
 }
 
 a:hover {
-    font-size: 25px;
+    font-size: 150%;
     background-color: rgb(163, 85, 199);
-    text-align: center;
+    /* text-align: center; */
     /* position: fixed; */
 }
