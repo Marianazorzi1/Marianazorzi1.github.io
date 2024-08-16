@@ -24,18 +24,8 @@
     justify-content: space-around;
     margin: 10px;
 }
-#lala{
-    min-width: 80px;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
-#lala{
-    height: 100%;
-    width: 100%;
-}
-
-.roteiro {
-    width: 100%;    
-    text-align: center;
+#img{
+    height: 300px;
+    width: 300px;
+    border: #ffffff 1px solid;
 }

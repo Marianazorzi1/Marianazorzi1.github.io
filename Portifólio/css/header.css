@@ -1,0 +1,38 @@
+.menu{
+    background-color: #4646a7;
+    margin-top: 0px;
+    padding: 20px;
+    cursor: pointer;
+    list-style: none;
+    height: 35px;
+}
+#organizar_menu{
+    list-style: none;
+    margin-left: 85%;
+    display: flex;
+    font-size: 23px;
+    gap: 10%;
+    text-decoration: none;
+    border: none;
+    margin-top: -35px;
+    margin-left: 580px;
+}
+.botao{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    height: 10px;
+    gap: 10%;
+
+}
+h1{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #000000;
+}
+table{
+    margin-left: 50px;
+    color: antiquewhite;
+}
