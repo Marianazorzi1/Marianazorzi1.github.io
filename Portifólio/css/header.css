@@ -1,10 +1,13 @@
 .menu{
-    background-color: #4646a7;
+    background-color: #404040;
     margin-top: 0px;
     padding: 20px;
     cursor: pointer;
     list-style: none;
     height: 35px;
+    margin-left: -10px;
+    margin-top: -10px;
+    margin-right: -10px;
 }
 #organizar_menu{
     list-style: none;
@@ -24,15 +27,14 @@
     gap: 10%;
 
 }
+.botao:hover{
+    color: grey;
+}
 h1{
     font-size: 20px;
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: #000000;
-}
-table{
-    margin-left: 50px;
-    color: antiquewhite;
+    background-color: #737373;
 }

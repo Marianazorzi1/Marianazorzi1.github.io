@@ -1,0 +1,18 @@
+.menu{
+    background-color: #404040;
+    margin-top: 0px;
+    padding: 20px;
+    cursor: pointer;
+    list-style: none;
+    height: 35px;
+    margin-left: -10px;
+    margin-top: -10px;
+    margin-right: -10px;
+}
+
+#img{
+    height: 300px;
+    width: 300px;
+    border:0;
+    margin-top: 18px;
+}
