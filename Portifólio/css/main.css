@@ -1,4 +1,4 @@
-.um{
+/* .um{
     width: 20%;
     min-width: 200px;
     border: 8px #303030 solid;
@@ -13,7 +13,7 @@
     font-size: 17px;
     margin: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+} */
 
 .dois{
     width: 100%;
@@ -24,15 +24,20 @@
     align-items: center;
     justify-content: space-around;
     margin: 10px;
+
 }
 #img{
-    height: 300px;
+    height: 400px;
     width: 300px;
     border:0;
     margin-top: 18px;
-}
-.para{
+    min-width: 200px;
+    border-radius: 15px;
+    border: 5px solid #000000;
 
+}
+.para {
+    display: inline-block; /* Mantém o conteúdo como um bloco */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     padding: 20px; 
     color: #000000;
@@ -40,9 +45,15 @@
     font-size: 20px; 
     text-decoration: none;
     margin: 20px;
-    margin-bottom: 70px;
-    margin-top: 10px;
 }
+
+.mft {
+    display: block; /* Garante que a imagem fique abaixo do texto */
+    margin-top: 10px; /* Ajuste a margem conforme necessário */
+    max-width: 100%; /* Garante que a imagem não exceda o tamanho do contêiner */
+    border-radius: 8px; /* Aplica o border-radius também à imagem */
+}
+
 .paro{
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -77,8 +88,54 @@
 h2{
     padding: 5px;
 }
-.h1{
-    color: #000000;
-    font-size: 24px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    min-width: 320px;
+    background-color: #606060;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+    margin-bottom: 90px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px ;
+    padding-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.h3{
+    color: #ccc;
+    font-size: 25px;
+    text-align: center;
+
+
 }

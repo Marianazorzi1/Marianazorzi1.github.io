@@ -10,3 +10,16 @@ footer {
     padding-top: -10px;
     margin-top: 70px;
   }
+.medias-sociais{
+  margin-left: 700px;
+  margin-bottom: -35px;
+
+  }
+.link_footer{
+  padding: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  }
+  .fa-brands:hover {
+    color: grey;
+  }
