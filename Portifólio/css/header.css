@@ -25,6 +25,7 @@
     color: rgb(255, 255, 255);
     height: 10px;
     gap: 10%;
+   padding-left: 50px;
 
 }
 .botao:hover{
@@ -40,5 +41,5 @@ body{
 }
 .port{
     color: aliceblue;
-    margin-right: 1160px;
+    margin-right: 1800px;
 }
