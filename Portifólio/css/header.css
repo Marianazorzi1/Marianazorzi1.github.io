@@ -26,6 +26,8 @@
     height: 10px;
     gap: 10%;
    padding-left: 50px;
+   margin-top: -10px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 .botao:hover{
