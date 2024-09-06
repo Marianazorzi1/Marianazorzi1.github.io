@@ -33,12 +33,12 @@
     margin-top: 18px;
     min-width: 200px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 
 }
 .para {
     display: inline-block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     padding: 20px; 
     color: #000000;
     border-radius: 8px;
@@ -58,7 +58,7 @@
 
 .paro{
 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     padding: 20px; 
     color: #000000;
     border-radius: 8px;
@@ -70,7 +70,7 @@
 
 }
 .pari{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     padding: 20px; 
     color: #000000;
     font-size: 20px; 
