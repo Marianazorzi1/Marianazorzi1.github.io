@@ -19,16 +19,16 @@ const Header = () => {
       <nav className={`nav ${isOpen ? "active" : ""}`}>
         <ul className="nav-list">
           <li>
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
             <a href="/sobre">Sobre</a>
           </li>
           <li>
-            <a href="#services">Serviços</a>
+            <a href="/services">Serviços</a>
           </li>
           <li>
-            <a href="#contact">Contato</a>
+            <a href="/contact">Contato</a>
           </li>
         </ul>
       </nav>
