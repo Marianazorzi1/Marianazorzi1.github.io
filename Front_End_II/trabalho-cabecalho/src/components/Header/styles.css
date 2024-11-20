@@ -1,0 +1,63 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav {
+  display: none; /* Inicialmente escondido */
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #222;
+  padding: 1rem;
+  overflow-y: auto; /* Permite rolagem somente no menu, se necessário */
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Esconde o menu */
+}
+
+.nav.active {
+  display: flex;
+  transform: translateX(0); /* Mostra o menu */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-bottom: 1rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
