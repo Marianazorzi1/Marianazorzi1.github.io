@@ -1,8 +1,8 @@
-/* styles.css */
+
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Evita barra de rolagem horizontal */
+  overflow-x: hidden; 
 }
 
 .header {
@@ -27,7 +27,7 @@ body {
 }
 
 .nav {
-  display: none; /* Inicialmente escondido */
+  display: none; 
   flex-direction: column;
   position: fixed;
   top: 0;
@@ -36,14 +36,14 @@ body {
   width: 200px;
   background-color: #222;
   padding: 1rem;
-  overflow-y: auto; /* Permite rolagem somente no menu, se necessário */
+  overflow-y: auto; 
   transition: transform 0.3s ease-in-out;
-  transform: translateX(-100%); /* Esconde o menu */
+  transform: translateX(-100%); 
 }
 
 .nav.active {
   display: flex;
-  transform: translateX(0); /* Mostra o menu */
+  transform: translateX(0); 
 }
 
 .nav-list {
