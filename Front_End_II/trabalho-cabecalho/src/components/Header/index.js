@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import "./styles.css";
-
+import Image from "next/image"; 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,12 +11,12 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  // Função para fechar o menu ao clicar fora
+ 
   const closeMenuOnClickOutside = (e) => {
     const menu = document.querySelector('.nav');
     const menuButton = document.querySelector('.menu-toggle');
     if (menu && !menu.contains(e.target) && !menuButton.contains(e.target)) {
-      setIsOpen(false); // Fecha o menu
+      setIsOpen(false); 
     }
   };
 
@@ -29,7 +29,9 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">Cabeçalho</div>
+      <Image src="/images/logoo.webp" alt="Logo" className="logo"  width="50" height="50"/>
+    
+
       <button
         className="menu-toggle"
         onClick={toggleMenu}
