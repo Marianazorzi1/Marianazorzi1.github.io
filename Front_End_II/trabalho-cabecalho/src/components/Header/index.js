@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">Minha Logo</div>
+      <div className="logo">Cabeçalho</div>
       <button
         className="menu-toggle"
         onClick={toggleMenu}
