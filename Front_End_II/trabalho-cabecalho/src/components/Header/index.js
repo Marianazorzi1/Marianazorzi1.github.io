@@ -21,10 +21,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    // Adiciona o event listener para detectar cliques fora do menu
     document.addEventListener("mousedown", closeMenuOnClickOutside);
-    
-    // Remove o event listener quando o componente for desmontado
     return () => {
       document.removeEventListener("mousedown", closeMenuOnClickOutside);
     };
