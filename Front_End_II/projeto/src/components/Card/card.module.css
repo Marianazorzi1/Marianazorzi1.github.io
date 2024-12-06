@@ -1,0 +1,8 @@
+.div{
+    border: solid #000000;
+    margin: 20px;
+    align-items: center;
+    flex-direction: column;
+    background-color: blueviolet;
+    color: aliceblue;
+}

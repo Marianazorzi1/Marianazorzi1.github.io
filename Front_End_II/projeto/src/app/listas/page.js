@@ -57,7 +57,6 @@ export default function Listas() {
                 ))}
 
                 <h2>Lista de Objetos</h2>
-
                 {racasObj.map((r) => (
                     <li key={r.id}> {r.id + 1} - {r.raca}</li>
 
