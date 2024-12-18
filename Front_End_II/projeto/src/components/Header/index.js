@@ -1,6 +1,7 @@
 import Link from "next/link"
 import styles from "./header.module.css"
 
+
 export default function Header () {
 
     return(
@@ -13,6 +14,7 @@ export default function Header () {
                     <li><Link href='/listas'>Listas</Link></li>
                     <li><Link href='/props'>Props</Link></li>
                     <li><Link href='/filter'>Filter</Link></li>
+                    <li><Link href='/efeitos'>Efeitos</Link></li>
                   
                 </ul>
                 
