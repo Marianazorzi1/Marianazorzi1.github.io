@@ -50,7 +50,7 @@ export default function Efeitos() {
                 <option value="">Selecione o estado</option>
                 {ufs.map((uf) => (
                     <option value={uf.sigla} key={uf.id}>
-                        {uf.nome}
+                        {uf.nome} - {uf.sigla}
                     </option>
                 ))}
             </select>
