@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <Image src="/images/png-transparent-injury-health-care-computer-icons-accident-accident-logo-accident-medical-thumbnail.png" alt="Logo" className="logo"  width="50" height="50"/>
+      <Image src="/images/hfrwbj (3).png" alt="Logo" className="logo"  width="300" height="150"/>
     
 
       <nav className={`nav ${isOpen ? "active" : ""}`}>
