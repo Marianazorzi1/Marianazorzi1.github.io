@@ -1,0 +1,29 @@
+.inici {
+    background-color: #f4f7f6;
+    margin-top: 10% !important;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto ;
+    text-align: center;
+  }
+  
+  .inici h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .text {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+  }
+  
+  .text:hover {
+    color: #3498db;
+    transition: color 0.3s ease;
+  }
+  

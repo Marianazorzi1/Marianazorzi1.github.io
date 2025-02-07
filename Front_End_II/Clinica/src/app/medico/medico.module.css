@@ -1,0 +1,52 @@
+.container {
+    margin-top: 7% ;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .titulo {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .tabela th, .tabela td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .tabela th {
+    background-color: #037070;
+    color: white;
+  }
+  .busc{
+    background-color: #27ae60;
+    padding: 0.7%;
+    width: 7%;
+    border-radius: 7px;
+    margin-right: 93%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .busc:hover{
+    background-color: #037070;
+    color: #333;
+  }
+  
+  .linhaClara {
+    background-color: #f9f9f9;
+  }
+  
+  .tabela tr:hover {
+    background-color: #f1f1f1;
+  }
+  
