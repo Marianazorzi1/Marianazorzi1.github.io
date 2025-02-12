@@ -1,51 +1,118 @@
 'use client';
-import { useState } from "react";
-import styles from './medico.module.css';
+import React, { useEffect, useState } from "react";
+import estilos from './medico.module.css';
 
-const Medicos = () => {
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [medicos, setMedicos] = useState([
-        { idmedico: 1, nome: "Dr. João Silva", telefone: "(11)99999-0001", email: "joão@silva.com", especialidade: "Clínica Geral" },
-        { idmedico: 2, nome: "Dra. Maria Luiza", telefone: "(11)98888-0002", email: "maria@luiza.com", especialidade: "Pediatria" },
-        { idmedico: 3, nome: "Dr. Antonio Carlos", telefone: "(11)97777-0003", email: "antonio@carlos.com", especialidade: "Cirurgia" },
-        { idmedico: 4, nome: "Dra. Sofia Patrícia", telefone: "(11)96666-0004", email: "sofia@patricia.com", especialidade: "Ginecologia" },
-        { idmedico: 5, nome: "Dr. Luiz Henrique", telefone: "(11)95555-0005", email: "luiz@henrique.com", especialidade: "Cardiologia" },
-        { idmedico: 6, nome: "Dra. Beatriz Cristina", telefone: "(11)94444-0006", email: "beatriz@cristina.com", especialidade: "Psiquiatria" },
-        { idmedico: 7, nome: "Dr. Marcelo Alves", telefone: "(11)93333-0007", email: "marcelo@alves.com", especialidade: "Ortopedia" },
-        { idmedico: 8, nome: "Dra. Laura Fernanda", telefone: "(11)92222-0008", email: "laura@fernanda.com", especialidade: "Dermatologia" },
-        { idmedico: 9, nome: "Dr. Felipe Oliveira", telefone: "(11)91111-0009", email: "felipe@oliveira.com", especialidade: "Urologia" },
-        { idmedico: 10, nome: "Dra. Gabriela Souza", telefone: "(11)90000-0010", email: "gabriela@souza.com", especialidade: "Oftalmologia" }
-    ]);
+const urlBanco = "https://api-clinica-2a.onrender.com";
+
+export default function Medicos() {
+    const [medicos, setMedicos] = useState([]); 
+    const [medicosFiltrados, setMedicosFiltrados] = useState([]); 
+    const [mostrarLista, setMostrarLista] = useState(false); 
+    const [pesquisa, setPesquisa] = useState(""); 
+
+
+    const alternarPopup = async () => {
+        setMostrarLista((prev) => !prev);
+
+        if (!mostrarLista) {
+            await listarMedicos();
+        }
+    };
+
+    async function listarMedicos() {
+        try {
+            const resposta = await fetch(`${urlBanco}/medicos`);
+            if (!resposta.ok) throw new Error("Erro ao buscar dados: " + resposta.statusText);
+
+            const dados = await resposta.json();
+            setMedicos(dados);
+            setMedicosFiltrados(dados);
+        } catch (erro) {
+            console.error('Erro ao buscar médicos:', erro);
+        }
+    }
+
+    function pesquisaMudancaMedicos(nome) {
+        setPesquisa(nome);
+
+        if (nome.trim() === "") {
+            setMedicosFiltrados(medicos); 
+        } else {
+            const filtrados = medicos.filter((medico) =>
+                medico.nome.toLowerCase().includes(nome.toLowerCase())
+            );
+            setMedicosFiltrados(filtrados);
+        }
+    }
+
+    useEffect(() => {
+        listarMedicos();
+    }, []);
 
     return (
-        <div className={styles.container}>
-            <h1 className={styles.titulo}>Lista de Médicos</h1>
-            <button className={styles.busc}>Buscar</button>
-            <table className={styles.tabela}>
-                <thead>
-                    <tr>
-                        <th>EU IA</th>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Email</th>
-                        <th>Especialidade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {medicos.map((medico, index) => (
-                        <tr key={medico.idmedico} className={index % 2 === 0 ? styles.linhaClara : ""}>
-                            <td>{medico.idmedico}</td>
-                            <td>{medico.nome}</td>
-                            <td>{medico.telefone}</td>
-                            <td>{medico.email}</td>
-                            <td>{medico.especialidade}</td>
+        <div className={estilos.containerPagina}>
+            <div className={estilos.conteudoPrincipal}>
+                <div className={estilos.tituloPagina}>
+                    <h1 className={estilos.tituloPaginaTexto}>Lista de Médicos</h1>
+                </div>
+                <div className={estilos.containerBotao}>
+                    <button onClick={alternarPopup} className={estilos.botaoBuscar}>
+                        Buscar Médico
+                    </button>
+                </div>
+
+                {mostrarLista && (
+                    <div className={estilos.popupContainer} onClick={alternarPopup}>
+                        <div className={estilos.popup} onClick={(e) => e.stopPropagation()}>
+                            <button className={estilos.botaoFechar} onClick={alternarPopup}>Fechar</button>
+
+                            <input
+                                type="text"
+                                className={estilos.inputPesquisa}
+                                value={pesquisa}
+                                onChange={(e) => pesquisaMudancaMedicos(e.target.value)}
+                                placeholder="Digite o nome do médico"
+                                onInput={(e) => e.target.value = e.target.value.replace(/['"]/g, '')}
+                            />
+
+                            <div className={estilos.listaMedicos}>
+                                {medicosFiltrados.length > 0 ? (
+                                    medicosFiltrados.map((medico) => (
+                                        <div key={medico.id} className={estilos.itemMedico}>
+                                            {medico.nome}
+                                        </div>
+                                    ))
+                                ) : (
+                                    <p className={estilos.nenhumEncontrado}>Nenhum médico encontrado.</p>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                <table className={estilos.tabelaMedicos}>
+                    <thead className={estilos.cabecalhoTabela}>
+                        <tr className={estilos.cabecalhoCelula}>
+                            <th className={estilos.cabecalhoCelulaItem}>Id</th>
+                            <th className={estilos.cabecalhoCelulaItem}>Nome</th>
+                            <th className={estilos.cabecalhoCelulaItem}>Telefone</th>
+                            <th className={estilos.cabecalhoCelulaItem}>E-mail</th>
+                            <th className={estilos.cabecalhoCelulaItem}>Especialidade</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody className={estilos.corpoTabela}>
+                        {medicos.map((medico) => (
+                            <tr key={medico.id}>
+                                <td className={estilos.linhaTabela}>{medico.id}</td>
+                                <td className={estilos.linhaTabela}>{medico.nome}</td>
+                                <td className={estilos.linhaTabela}>{medico.telefone}</td>
+                                <td className={estilos.linhaTabela}>{medico.email}</td>
+                                <td className={estilos.linhaTabela}>{medico.especialidade}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
-};
-
-export default Medicos;
+}
