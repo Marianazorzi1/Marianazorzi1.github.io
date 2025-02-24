@@ -70,7 +70,7 @@
 }
 
 .botaoBuscar {
-  background-color: #16a58b;
+  background-color: #2eb8b1;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -80,7 +80,7 @@
 }
 
 .botaoBuscar:hover {
-  background-color: #064f44;
+  background-color: #0da08a;
   transform: scale(1.1); 
 }
 

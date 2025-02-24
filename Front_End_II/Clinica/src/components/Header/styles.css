@@ -22,6 +22,7 @@ body {
 .logo {
   width: 140px;
   height: 85px;
+  margin: 0;
 }
 
 .navOpcoes {
