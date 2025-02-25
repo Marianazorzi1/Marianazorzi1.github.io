@@ -11,7 +11,7 @@ export default function Home() {
       </div>
       <main className={styles.main}>
         <p className={styles.text}>
-        No Centro Médico Zorzi, cuidamos do seu bem-estar de forma completa, oferecendo
+        No Centro Médico Zorzi, cuidamos do seu bem-estar de forma completa, oferecendo 
          atendimento humanizado, diagnóstico preciso e tratamentos eficazes. Com uma equipe 
          qualificada e estrutura moderna, valorizamos a saúde física, emocional e mental de cada paciente.
           Nosso compromisso é proporcionar excelência e dedicação em cada
