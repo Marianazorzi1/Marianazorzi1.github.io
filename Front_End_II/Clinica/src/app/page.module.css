@@ -12,7 +12,7 @@
 }
 
 .titulo {
-  background-color: #16a58b;
+  background-color: #77b395;
   color: white;
   padding: 5px 5px;
   border-radius: 8px;
@@ -25,10 +25,11 @@
 }
 
 .main {
-  background-color: #ffffff;
+  background-color: #7e9b8c;
   padding: 30px 20px;
   border-radius: 8px;
   margin-bottom: 10px;
+  color: #000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,7 +40,7 @@
 }
 
 .footer {
-  background-color: #16a58b;
+  background-color: #77b395;
   color: white;
   padding: 10px;
   border-radius: 8px;

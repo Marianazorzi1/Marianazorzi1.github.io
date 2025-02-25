@@ -12,9 +12,9 @@ const Header = () => {
     <header className="header">
       <Image
         className="logo"
-        src="/images/hfrwbj (3).png"
+        src="/images/image.png"
         alt="Logo"
-        width={140}
+        width={120}
         height={85}
       />
       

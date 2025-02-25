@@ -57,16 +57,16 @@
 
 .linhaTabela {
     font-size: 18px;
-    border: 2px solid #c8c8c8;
+    border: 2.1px solid #3ba597;
     padding: 15px;
 }
 
 .cabecalhoCelula {
     font-size: 18px;
-    border: 2px solid #588868;
-    background-color: #588868;
-    padding: 15px;
+    /* border: 2px solid #588868; */
+    background-color: #35978f;;
     font-weight: bold;
+    
 }
 
 .botaoBuscar {
@@ -106,7 +106,7 @@
 }
 
 .popup {
-    background-color: #c2fccf;
+    background-color: #77b395;
     padding: 15px;
     border-radius: 4px;
     width: 80%;
@@ -141,8 +141,9 @@
 }
 
 .botaoFechar {
-  background-color: #aa342b;
+  background-color: #150101;
   color: white;
+  font-weight: bold;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -153,7 +154,7 @@
 }
 
 .botaoFechar:hover {
-  background-color: #150101;
+  background-color: #ec0000;
   transform: scale(1.1);
 }
 

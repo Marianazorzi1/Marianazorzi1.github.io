@@ -108,7 +108,7 @@
 }
 
 .popup {
-    background-color: #c2fccf;
+    background-color: #77b395;
     padding: 15px;
     border-radius: 4px;
     width: 80%;
@@ -143,7 +143,7 @@
 }
 
 .botaoFechar {
-  background-color: #aa342b;
+  background-color: #150101;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -155,7 +155,7 @@
 }
 
 .botaoFechar:hover {
-  background-color: #150101;
+  background-color: #ec0000;
   transform: scale(1.1);
 }
 
